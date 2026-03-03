@@ -19,7 +19,7 @@ def get_api_key():
     api_key = os.getenv("DASHSCOPE_API_KEY")
     if not api_key:
         print("未找到环境变量 DASHSCOPE_API_KEY")
-        api_key = input("请输入您的通义千问API密钥: ").strip()
+        api_key = input("请输入您的通义千问API密钥: sk-ca465c9115bf4e659b6d179e2c4e6670").strip()
     return api_key
 
 
@@ -67,7 +67,7 @@ def call_qwen_api(api_key, question, model="qwen-turbo"):
     
     # 请求头
     headers = {
-        "Authorization": f"Bearer {sk-bb6cf42253ab43c8bbb684e74e8d7f93}",
+        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
     
